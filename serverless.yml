@@ -84,23 +84,23 @@ functions:
           path: animals
           method: POST
 
-    getAnimals:
-      handler: handler.list
-      events:
-        - http:
-            path: animals
-            method: GET
+  getAnimals:
+    handler: handler.list
+    events:
+      - http:
+          path: animals
+          method: GET
 
-    deleteAnimal:
-      handler: handler.delete
-      events:
-        - http:
-            path: animals/:name
-            method: DELETE
-            request:
-              parameters:
-                paths:
-                  name: true
+  deleteAnimal:
+    handler: handler.delete
+    events:
+      - http:
+          path: animals/:name
+          method: DELETE
+          request:
+            parameters:
+              paths:
+                name: true
 
 
 
